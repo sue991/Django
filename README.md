@@ -36,6 +36,7 @@
 - templates
 
     home.html // Blog home 화면, 글 목록
+    
     detail.html // 각각 글 자세히
 
 - path converter, get_object_or_404 
