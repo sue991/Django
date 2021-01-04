@@ -36,9 +36,17 @@
 - templates
   + home.html // Blog home 화면, 글 목록
   + detail.html // 각각 글 자세히
-
-- path converter, get_object_or_404 사용
+  + new.html // 글쓰기
+  
+- blog
+  + `127.0.0.1:8000` // home.html
+  + `127.0.0.1:8000/blog/{blog_id}` // detail.html
+  + `http://127.0.0.1:8000/blog/new` // 새로운 글 작성 후 제출
+  + create : 새로운 글 업로드 후 생성한 blog/{id} page로 redirect
+ 
+- path converter, get_object_or_404,redirect 사용
         
+  
 
 
 
