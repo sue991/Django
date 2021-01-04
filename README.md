@@ -1,6 +1,6 @@
 # Django
 
-##210104
+## 210104
 - 환경변수, django server, project 및 app 직접 만들어보기
 
 - 환경변수 
