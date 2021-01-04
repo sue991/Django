@@ -22,7 +22,24 @@
   + `127.0.0.1:8000`
   + 단어 수 세기
  
+ 
+---
+ 
+- secondprogect : blog 만들기
 
+- admin, model.py를 이용한 DB 다루기
+
+- secondproject
+  + blog // App1
+  + secondproject // Progect
+
+- templates
+  
+    home.html // Blog home 화면, 글 목록
+    detail.html // 각각 글 자세히
+    
+- path converter, get_object_or_404 
+        
 
 
 
