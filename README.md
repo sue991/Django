@@ -64,6 +64,14 @@
   + Project폴더에 templates 생성.
   + 프로젝트 전반에 적용함
   + `'DIRS': ['secondproject/templates']` 추가
+  + block contents , endblock 활용
+```
+{% extends 'base.html' %}
+
+{% block contents %}
+
+{% endblock %}
+```
   
 - URL 관리
   + Project가 아닌 App에서 `url.py` 생성 후 url 관리
