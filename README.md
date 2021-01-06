@@ -65,7 +65,7 @@
   + 프로젝트 전반에 적용함
   + `'DIRS': ['secondproject/templates']` 추가
   + block contents , endblock 활용
-```
+```django
 {% extends 'base.html' %}
 
 {% block contents %}
