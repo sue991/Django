@@ -47,6 +47,28 @@
 - path converter, get_object_or_404,redirect 사용
         
   
+## 210105
+- static, media 응용
+  + static : 미리 서버에 저장되어있는 파일
+  + media : 웹 서비스 이용자들이 업로드하는 파일. url 통해 외부와 통신
+  
+- App 에 static 폴더 만들고 사용
+- `python manage.py collectstatic` 통해 static 파일 모아주기. 
+- `urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)` 사용해 URL로 사용자가 업로드한 media 파일에 접근.
+
+---
+
+- template 상속과 url 관리
+
+- templates
+  + Project폴더에 templates 생성.
+  + 프로젝트 전반에 적용함
+  + `'DIRS': ['secondproject/templates']` 추가
+  
+- URL 관리
+  + Project가 아닌 App에서 `url.py` 생성 후 url 관리
+  + `from . import views` // app.urls.py
+  + `from django.urls import include` // project.urls.py
 
 
 
