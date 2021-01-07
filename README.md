@@ -87,13 +87,12 @@
   + `{% csrf_token %}`  // 사이트간 요청 위조(Cross Site Request Forgery) 공격을 막기 위한 코드
   + `from django.contrib.auth.models import User` // signup, login을 위한 기능
   + `from django.contrib import auth` // signup, login을 위한 기능
-  
+ 
 ```django
   user = User.objects.create_user(username = request.POST['username'], password = request.POST['password1'])
   auth.login(request, user)
   auth.logout(request)
 ```
-
 
 ---
 참고 : https://egg-money.tistory.com/80?category=811218
