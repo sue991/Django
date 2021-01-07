@@ -110,5 +110,35 @@ posts = paginator.get_page(page) # request된 페이지를 얻어온 뒤 return
 
 ```
 
+- Faker
+  + 많은 Data를 가진 환경 속에서 기능을 구현할 때 사용한다.
+  + 임의의 데이터를 만드는것
+  + `pip3 install faker`
+  + `from faker import Faker // fake.py`
+
+- Meta class
+  + class들을 정의하기 위한 class
+  + 상위 개념으로 클래스들을 묶어놓는 것
+  
+```python3
+from django import forms 
+
+class myForm(forms.ModelForm): 
+  class Meta:
+```
+
+- Form.py
+  + 모델을 기반으로 한 입력공간 : 장고에서 default 로 사용하는 model 틀을 가져다가 쓸 것이기 때문에 import 해줘야 한다.
+    * `from django import forms.ModelForm`
+  
+  + 임의의 입력공간
+    * `from django import forms.Form`
+
+  + `form.save(commit=False)`
+    * 지금까지 작성한 form이 담긴 객체만 리턴하고 저장은 나중에.
+    
+  + form을 사용하는 이유 : `views.py`에서 어떤 변수는 어떻게 받아서 넣어줘! 와 같은 작업을 할 필요 없이 자동으로 넣어준다는 장점이 있다.
+
+
 ---
 참고 : https://egg-money.tistory.com/80?category=811218
