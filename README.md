@@ -94,5 +94,23 @@
   auth.logout(request)
 ```
 
+##210107
+
+- Pagination 사용
+  + `from django.core.paginator import Paginator // blog.views.py`
+
+- 밑으로만 계속 생성되는 글을 잘라서 여러 페이지로 보여주기
+
+```django
+blog_list = Blog.objects.all()
+
+paginator = Paginator(blog_list,3)
+
+page = request.GET.get('page') # request된 페이지가 뭔지 알아내기
+
+posts = paginator.get_page(page) # request된 페이지를 얻어온 뒤 return
+
+```
+
 ---
 참고 : https://egg-money.tistory.com/80?category=811218
