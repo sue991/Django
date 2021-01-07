@@ -89,9 +89,9 @@
   + `from django.contrib import auth` // signup, login을 위한 기능
  
 ```python3
-  user = User.objects.create_user(username = request.POST['username'], password = request.POST['password1'])
-  auth.login(request, user)
-  auth.logout(request)
+user = User.objects.create_user(username = request.POST['username'], password = request.POST['password1'])
+auth.login(request, user)
+auth.logout(request)
 ```
 
 ##210107
@@ -101,7 +101,7 @@
 
 - 밑으로만 계속 생성되는 글을 잘라서 여러 페이지로 보여주기
 
-```django
+```python3
 blog_list = Blog.objects.all()
 
 paginator = Paginator(blog_list,3)
