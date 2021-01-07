@@ -88,7 +88,7 @@
   + `from django.contrib.auth.models import User` // signup, login을 위한 기능
   + `from django.contrib import auth` // signup, login을 위한 기능
  
-```django
+```python3
   user = User.objects.create_user(username = request.POST['username'], password = request.POST['password1'])
   auth.login(request, user)
   auth.logout(request)
